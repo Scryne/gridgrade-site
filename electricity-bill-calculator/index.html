@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electricity Bill Calculator by State (August 2026 rates) | GridGrade</title>
+<meta name="description" content="Estimate your monthly electric bill from your kWh use and your state's latest average residential rate (August 2026), or add up appliances to see what they cost to run.">
+<link rel="canonical" href="https://scryne.github.io/gridgrade-site/electricity-bill-calculator/">
+<meta property="og:site_name" content="GridGrade">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Electricity Bill Calculator by State (August 2026 rates) | GridGrade">
+<meta property="og:description" content="Estimate your monthly electric bill from your kWh use and your state's latest average residential rate (August 2026), or add up appliances to see what they cost to run.">
+<meta property="og:url" content="https://scryne.github.io/gridgrade-site/electricity-bill-calculator/">
+<meta property="og:image" content="https://scryne.github.io/gridgrade-site/static/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FAF8F3">
+<link rel="icon" href="/gridgrade-site/static/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,650&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/gridgrade-site/static/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="logo" href="/gridgrade-site/" aria-label="GridGrade home">
+      <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#17181C"/><path d="M18.5 4 8 18h7l-2 10 11-15h-7z" fill="#F2B705"/></svg>
+      <span>Grid<b>Grade</b></span>
+    </a>
+    <nav aria-label="Main">
+      <a href="/gridgrade-site/rankings/states/">States</a>
+      <a href="/gridgrade-site/rankings/utilities/">Utilities</a>
+      <a href="/gridgrade-site/electricity-bill-calculator/">Bill calculator</a>
+      <a href="/gridgrade-site/methodology/">Methodology</a>
+    </nav>
+    <div class="search" data-index="/gridgrade-site/search.json">
+      <label for="q" class="sr">Search a state, utility or county</label>
+      <input id="q" type="search" placeholder="Search utility, county or state" autocomplete="off" spellcheck="false">
+      <ul id="q-results" role="listbox" hidden></ul>
+    </div>
+  </div>
+</header>
+<main id="main">
+<nav class="wrap crumbs" aria-label="Breadcrumb"><ol>
+<li><a href="/gridgrade-site/">Home</a></li>
+<li><span aria-current="page">Electricity bill calculator</span></li></ol></nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://scryne.github.io/gridgrade-site/"},{"@type":"ListItem","position":2,"name":"Electricity bill calculator"}]}</script>
+<section class="wrap hero">
+  <h1>Electricity bill calculator</h1>
+  <p class="lede">Uses each state's average residential price for August 2026. For your exact rate, check your utility's
+  report card or your bill.</p>
+</section>
+<section class="wrap section calc" id="calc" data-states='{&#34;AL&#34;:{&#34;ad&#34;:&#34;Alabama&#34;,&#34;fiyat&#34;:16.33,&#34;tuketim&#34;:1140},&#34;AK&#34;:{&#34;ad&#34;:&#34;Alaska&#34;,&#34;fiyat&#34;:29.41,&#34;tuketim&#34;:588},&#34;AZ&#34;:{&#34;ad&#34;:&#34;Arizona&#34;,&#34;fiyat&#34;:15.05,&#34;tuketim&#34;:1054},&#34;AR&#34;:{&#34;ad&#34;:&#34;Arkansas&#34;,&#34;fiyat&#34;:14.37,&#34;tuketim&#34;:1056},&#34;CA&#34;:{&#34;ad&#34;:&#34;California&#34;,&#34;fiyat&#34;:29.75,&#34;tuketim&#34;:507},&#34;CO&#34;:{&#34;ad&#34;:&#34;Colorado&#34;,&#34;fiyat&#34;:17.17,&#34;tuketim&#34;:679},&#34;CT&#34;:{&#34;ad&#34;:&#34;Connecticut&#34;,&#34;fiyat&#34;:24.51,&#34;tuketim&#34;:703},&#34;DE&#34;:{&#34;ad&#34;:&#34;Delaware&#34;,&#34;fiyat&#34;:18.7,&#34;tuketim&#34;:927},&#34;DC&#34;:{&#34;ad&#34;:&#34;District of Columbia&#34;,&#34;fiyat&#34;:25.98,&#34;tuketim&#34;:635},&#34;FL&#34;:{&#34;ad&#34;:&#34;Florida&#34;,&#34;fiyat&#34;:14.99,&#34;tuketim&#34;:1097},&#34;GA&#34;:{&#34;ad&#34;:&#34;Georgia&#34;,&#34;fiyat&#34;:15.9,&#34;tuketim&#34;:1080},&#34;HI&#34;:{&#34;ad&#34;:&#34;Hawaii&#34;,&#34;fiyat&#34;:47.18,&#34;tuketim&#34;:514},&#34;ID&#34;:{&#34;ad&#34;:&#34;Idaho&#34;,&#34;fiyat&#34;:13.37,&#34;tuketim&#34;:907},&#34;IL&#34;:{&#34;ad&#34;:&#34;Illinois&#34;,&#34;fiyat&#34;:19.32,&#34;tuketim&#34;:697},&#34;IN&#34;:{&#34;ad&#34;:&#34;Indiana&#34;,&#34;fiyat&#34;:17.02,&#34;tuketim&#34;:929},&#34;IA&#34;:{&#34;ad&#34;:&#34;Iowa&#34;,&#34;fiyat&#34;:17.06,&#34;tuketim&#34;:848},&#34;KS&#34;:{&#34;ad&#34;:&#34;Kansas&#34;,&#34;fiyat&#34;:15.47,&#34;tuketim&#34;:887},&#34;KY&#34;:{&#34;ad&#34;:&#34;Kentucky&#34;,&#34;fiyat&#34;:13.8,&#34;tuketim&#34;:1101},&#34;LA&#34;:{&#34;ad&#34;:&#34;Louisiana&#34;,&#34;fiyat&#34;:12.87,&#34;tuketim&#34;:1211},&#34;ME&#34;:{&#34;ad&#34;:&#34;Maine&#34;,&#34;fiyat&#34;:32.11,&#34;tuketim&#34;:528},&#34;MD&#34;:{&#34;ad&#34;:&#34;Maryland&#34;,&#34;fiyat&#34;:21.4,&#34;tuketim&#34;:955},&#34;MA&#34;:{&#34;ad&#34;:&#34;Massachusetts&#34;,&#34;fiyat&#34;:30.48,&#34;tuketim&#34;:603},&#34;MI&#34;:{&#34;ad&#34;:&#34;Michigan&#34;,&#34;fiyat&#34;:22.99,&#34;tuketim&#34;:631},&#34;MN&#34;:{&#34;ad&#34;:&#34;Minnesota&#34;,&#34;fiyat&#34;:17.2,&#34;tuketim&#34;:745},&#34;MS&#34;:{&#34;ad&#34;:&#34;Mississippi&#34;,&#34;fiyat&#34;:14.43,&#34;tuketim&#34;:1170},&#34;MO&#34;:{&#34;ad&#34;:&#34;Missouri&#34;,&#34;fiyat&#34;:16.02,&#34;tuketim&#34;:1039},&#34;MT&#34;:{&#34;ad&#34;:&#34;Montana&#34;,&#34;fiyat&#34;:15.57,&#34;tuketim&#34;:826},&#34;NE&#34;:{&#34;ad&#34;:&#34;Nebraska&#34;,&#34;fiyat&#34;:13.54,&#34;tuketim&#34;:957},&#34;NV&#34;:{&#34;ad&#34;:&#34;Nevada&#34;,&#34;fiyat&#34;:12.72,&#34;tuketim&#34;:908},&#34;NH&#34;:{&#34;ad&#34;:&#34;New Hampshire&#34;,&#34;fiyat&#34;:27.64,&#34;tuketim&#34;:643},&#34;NJ&#34;:{&#34;ad&#34;:&#34;New Jersey&#34;,&#34;fiyat&#34;:24.61,&#34;tuketim&#34;:674},&#34;NM&#34;:{&#34;ad&#34;:&#34;New Mexico&#34;,&#34;fiyat&#34;:16.51,&#34;tuketim&#34;:653},&#34;NY&#34;:{&#34;ad&#34;:&#34;New York&#34;,&#34;fiyat&#34;:28.65,&#34;tuketim&#34;:586},&#34;NC&#34;:{&#34;ad&#34;:&#34;North Carolina&#34;,&#34;fiyat&#34;:14.95,&#34;tuketim&#34;:1044},&#34;ND&#34;:{&#34;ad&#34;:&#34;North Dakota&#34;,&#34;fiyat&#34;:13.31,&#34;tuketim&#34;:1076},&#34;OH&#34;:{&#34;ad&#34;:&#34;Ohio&#34;,&#34;fiyat&#34;:19.38,&#34;tuketim&#34;:864},&#34;OK&#34;:{&#34;ad&#34;:&#34;Oklahoma&#34;,&#34;fiyat&#34;:14.82,&#34;tuketim&#34;:1076},&#34;OR&#34;:{&#34;ad&#34;:&#34;Oregon&#34;,&#34;fiyat&#34;:15.92,&#34;tuketim&#34;:843},&#34;PA&#34;:{&#34;ad&#34;:&#34;Pennsylvania&#34;,&#34;fiyat&#34;:21.77,&#34;tuketim&#34;:836},&#34;RI&#34;:{&#34;ad&#34;:&#34;Rhode Island&#34;,&#34;fiyat&#34;:28.18,&#34;tuketim&#34;:552},&#34;SC&#34;:{&#34;ad&#34;:&#34;South Carolina&#34;,&#34;fiyat&#34;:15.76,&#34;tuketim&#34;:1070},&#34;SD&#34;:{&#34;ad&#34;:&#34;South Dakota&#34;,&#34;fiyat&#34;:15.15,&#34;tuketim&#34;:983},&#34;TN&#34;:{&#34;ad&#34;:&#34;Tennessee&#34;,&#34;fiyat&#34;:13.42,&#34;tuketim&#34;:1186},&#34;TX&#34;:{&#34;ad&#34;:&#34;Texas&#34;,&#34;fiyat&#34;:15.91,&#34;tuketim&#34;:1114},&#34;UT&#34;:{&#34;ad&#34;:&#34;Utah&#34;,&#34;fiyat&#34;:13.31,&#34;tuketim&#34;:785},&#34;VT&#34;:{&#34;ad&#34;:&#34;Vermont&#34;,&#34;fiyat&#34;:23.84,&#34;tuketim&#34;:590},&#34;VA&#34;:{&#34;ad&#34;:&#34;Virginia&#34;,&#34;fiyat&#34;:17.64,&#34;tuketim&#34;:1066},&#34;WA&#34;:{&#34;ad&#34;:&#34;Washington&#34;,&#34;fiyat&#34;:14.63,&#34;tuketim&#34;:927},&#34;WV&#34;:{&#34;ad&#34;:&#34;West Virginia&#34;,&#34;fiyat&#34;:16.31,&#34;tuketim&#34;:1056},&#34;WI&#34;:{&#34;ad&#34;:&#34;Wisconsin&#34;,&#34;fiyat&#34;:19.41,&#34;tuketim&#34;:665},&#34;WY&#34;:{&#34;ad&#34;:&#34;Wyoming&#34;,&#34;fiyat&#34;:14.43,&#34;tuketim&#34;:817}}' data-us="18.16">
+  <form class="calc-form" onsubmit="return false">
+    <label>State
+      <select id="c-state"><option value="">Choose a state</option></select>
+    </label>
+    <label>Monthly use (kWh)
+      <input id="c-kwh" type="number" min="0" max="20000" step="10" inputmode="numeric" placeholder="e.g. 900">
+    </label>
+    <label>Or price per kWh (¢), from your bill
+      <input id="c-rate" type="number" min="1" max="100" step="0.01" inputmode="decimal" placeholder="optional">
+    </label>
+  </form>
+  <div class="calc-out" aria-live="polite">
+    <p class="big" id="c-total">—</p>
+    <p id="c-note">Choose a state and enter your monthly kWh. If you leave kWh empty, the state's average use is assumed.</p>
+  </div>
+</section>
+<section class="wrap section">
+  <h2>What common appliances use</h2>
+  <p class="lede">Add appliances to build a monthly kWh estimate. Typical figures; your models may differ.</p>
+  <div class="table-wrap"><table class="appliances" id="appliances">
+    <thead><tr><th scope="col">Appliance</th><th scope="col" class="num">Typical kWh / month</th><th scope="col">Add</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Central air conditioning (summer)</th><td class="num">600</td><td><button type="button" class="add" data-kwh="600" aria-label="Add Central air conditioning (summer)">+ Add</button></td></tr>
+      <tr><th scope="row">Electric water heater</th><td class="num">350</td><td><button type="button" class="add" data-kwh="350" aria-label="Add Electric water heater">+ Add</button></td></tr>
+      <tr><th scope="row">Electric heat pump (winter)</th><td class="num">700</td><td><button type="button" class="add" data-kwh="700" aria-label="Add Electric heat pump (winter)">+ Add</button></td></tr>
+      <tr><th scope="row">Refrigerator</th><td class="num">55</td><td><button type="button" class="add" data-kwh="55" aria-label="Add Refrigerator">+ Add</button></td></tr>
+      <tr><th scope="row">Clothes dryer</th><td class="num">75</td><td><button type="button" class="add" data-kwh="75" aria-label="Add Clothes dryer">+ Add</button></td></tr>
+      <tr><th scope="row">Electric range and oven</th><td class="num">50</td><td><button type="button" class="add" data-kwh="50" aria-label="Add Electric range and oven">+ Add</button></td></tr>
+      <tr><th scope="row">Dishwasher</th><td class="num">25</td><td><button type="button" class="add" data-kwh="25" aria-label="Add Dishwasher">+ Add</button></td></tr>
+      <tr><th scope="row">Washing machine</th><td class="num">10</td><td><button type="button" class="add" data-kwh="10" aria-label="Add Washing machine">+ Add</button></td></tr>
+      <tr><th scope="row">LED lighting, whole home</th><td class="num">40</td><td><button type="button" class="add" data-kwh="40" aria-label="Add LED lighting, whole home">+ Add</button></td></tr>
+      <tr><th scope="row">TV and streaming devices</th><td class="num">25</td><td><button type="button" class="add" data-kwh="25" aria-label="Add TV and streaming devices">+ Add</button></td></tr>
+      <tr><th scope="row">Desktop computer</th><td class="num">30</td><td><button type="button" class="add" data-kwh="30" aria-label="Add Desktop computer">+ Add</button></td></tr>
+      <tr><th scope="row">Level 2 EV charging, 1,000 miles</th><td class="num">300</td><td><button type="button" class="add" data-kwh="300" aria-label="Add Level 2 EV charging, 1,000 miles">+ Add</button></td></tr>
+      <tr><th scope="row">Pool pump</th><td class="num">300</td><td><button type="button" class="add" data-kwh="300" aria-label="Add Pool pump">+ Add</button></td></tr>
+      <tr><th scope="row">Space heater, 4 h a day</th><td class="num">180</td><td><button type="button" class="add" data-kwh="180" aria-label="Add Space heater, 4 h a day">+ Add</button></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="wrap section note">
+  <h2>How the estimate works</h2>
+  <p>Estimated bill = monthly kWh × average price per kWh. State averages divide all residential revenue by all residential
+  sales, so they already include typical fixed charges spread over usage; a household that uses much less than average will
+  usually pay a higher effective rate. Appliance figures are rounded typical values for planning only.</p>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="logo small"><span>Grid<b>Grade</b></span></p>
+      <p>Electricity prices and utility report cards for every US state, utility and county, rebuilt automatically from
+      public U.S. Energy Information Administration data.</p>
+    </div>
+    <div>
+      <p><b>Data</b></p>
+      <p>Monthly prices through August 2026 (EIA-861M). Utility data for 2025 (EIA-861).
+      Source: <a href="https://www.eia.gov/electricity/data/eia861/" rel="noopener">U.S. EIA</a>. GridGrade is independent
+      and not affiliated with EIA or any utility.</p>
+    </div>
+    <div>
+      <p><b>Site</b></p>
+      <p><a href="/gridgrade-site/methodology/">Methodology</a> · <a href="/gridgrade-site/about/">About</a> ·
+      <a href="/gridgrade-site/privacy/">Privacy</a> · <a href="/gridgrade-site/utilities/">All utilities</a></p>
+    </div>
+  </div>
+</footer>
+<script src="/gridgrade-site/static/search.js" defer></script>
+<script src="/gridgrade-site/static/calc.js" defer></script></body>
+</html>

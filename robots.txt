@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://scryne.github.io/gridgrade-site/sitemap.xml
