@@ -104,6 +104,9 @@ svg .tk{font-size:14px;font-weight:700}
 svg .tv{font-size:12px;font-weight:500}
 svg .bl{font-size:12.5px;fill:var(--ink)}
 svg .bv{font-size:12px;fill:var(--muted);font-weight:600}
+/* Line and bar charts ship a 720-unit and a 360-unit drawing; on phones the 720 one set axis labels at ~6px. */
+svg[data-boy="dar"]{display:none}
+@media (max-width:480px){svg[data-boy="genis"]{display:none}svg[data-boy="dar"]{display:block}}
 svg.tilemap a:hover rect,svg.tilemap a:focus rect{stroke:var(--ink);stroke-width:2.5}
 .map-figure{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
 /* Phones: the tile map scaled to ~360px set state codes and prices at ~6px. Keep it legible and let it scroll sideways. */
@@ -136,7 +139,7 @@ table.compact{max-width:560px}
 .calc-out{background:var(--ink);color:#fff;border-radius:var(--radius);padding:24px}
 .calc-out .big{display:block;margin-bottom:12px}
 .calc-out p{color:#D9DCE2}
-button.add{font:inherit;font-size:14px;font-weight:600;border:1px solid var(--line);background:#fff;border-radius:6px;padding:5px 10px;cursor:pointer;color:var(--ink)}
+button.add{font:inherit;font-size:14px;font-weight:600;border:1px solid var(--line);background:#fff;border-radius:6px;padding:5px 10px;cursor:pointer;color:var(--ink);white-space:nowrap;min-height:36px}
 button.add:hover{border-color:var(--ink)}
 button.add[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
 
